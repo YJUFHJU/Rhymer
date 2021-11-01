@@ -17,6 +17,9 @@ public class Rhymes {
 
 	public static void main(String[] args) throws java.io.IOException {
 		File f = new File("rhymes//resources//dictionary.dat");
+		if (!f.exists())
+			MakeDictionary.makeDictionary();
+		
 		BufferedReader br = new BufferedReader(new FileReader(f));
 		PrintStream ps = new PrintStream(System.out, false, "Cp866");
 		Properties dict = new Properties();
