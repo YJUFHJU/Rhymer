@@ -1,8 +1,10 @@
 package rhymes;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Properties;
 
 
@@ -10,10 +12,11 @@ import java.util.Properties;
  * Создать непосредственный словарь транскрипций в виде
  * несложной базы данных, при помощи класса Properties.
  */
-public class GetDictionary {
-	public static void main(String[] args) throws Exception {
-		BufferedReader br = new BufferedReader(new FileReader("rhymes//resources//adapted-dictionary.txt"));
-		FileWriter fw = new FileWriter("dictionary.dat");
+public class MakeDictionary {
+	
+	public static void makeDictionary() throws java.io.IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("rhymes//resources//adapted-dictionary.txt"), "cp866"));
+		OutputStreamWriter fw = new OutputStreamWriter(new FileOutputStream("rhymes//resources//dictionary.dat"), "cp866");
 		
 		String s;
 		Properties p = new Properties();
