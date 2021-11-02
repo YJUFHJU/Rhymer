@@ -61,7 +61,7 @@ public class Transcription {
 	 * Полученная транскрипция будет не абсолютно достоверна, она будет точна лишь в той степени,
 	 * чтобы проанализировать, могут ли слова рифмоваться.
 	 */
-	static String getTransсription(String w) {
+	public static String getTransсription(String w) {
 		fillMap(voicedPairedCons, "бвгджз", "пфктшс");
 		fillMap(voicelessPairedCons, "пфктшс", "бвгджз");
 		fillMap(changingVows, "еёюяЕЁЮЯ", "эоуаЭОУА");
