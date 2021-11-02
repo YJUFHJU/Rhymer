@@ -21,7 +21,7 @@ public class MakeDictionary {
 		String s;
 		Properties p = new Properties();
 		while ((s = br.readLine()) != null) {
-			p.setProperty(s, Transcription.getTransсription(s));
+			p.setProperty(s.toLowerCase(), Transcription.getTransсription(s));
 		}
 		p.store(fw, "Dictionary");
 		br.close();
