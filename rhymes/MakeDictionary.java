@@ -15,8 +15,8 @@ import java.util.Properties;
 public class MakeDictionary {
 	
 	public static void makeDictionary() throws java.io.IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("rhymes//resources//adapted-dictionary.txt"), "cp866"));
-		OutputStreamWriter fw = new OutputStreamWriter(new FileOutputStream("rhymes//resources//dictionary.dat"), "cp866");
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("rhymes//resources//adapted-dictionary.txt"), "cp1251"));
+		OutputStreamWriter fw = new OutputStreamWriter(new FileOutputStream("rhymes//resources//dictionary.dat"), "cp1251");
 		
 		String s;
 		Properties p = new Properties();
